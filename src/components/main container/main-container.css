@@ -3,17 +3,3 @@
     grid-template-columns: 4fr 1fr;
     gap: 7px;
 }
-.order{
-    height: 945px;
-    width: 265px;
-    background-color: #f5b24e;
-    /* opacity: 40%; */
-    color: black;
-}
-.order h3{
-    color: black;
-    text-align: center;
-}
-.order p{
-    margin-left: 15px;
-}

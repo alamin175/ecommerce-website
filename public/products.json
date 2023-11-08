@@ -377,19 +377,6 @@
         "shipping": 2,
         "quantity": 0
     },
-    {
-        "id": "6add9d60-1339-4115-b2ac-00d4886f4ad7",
-        "category": "Men's Sneaker",
-        "name": "NYC BADGE OF SPORT LOGO GRAPHIC TEE",
-        "seller": "Addidas",
-        "price": 29,
-        "stock": 6,
-        "ratings": 3,
-        "ratingsCount": 805,
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e0101e13ac1940208478add1000e953a_9366/NYC_Badge_of_Sport_Logo_Graphic_Tee_White_HE2363_21_model.jpg",
-        "shipping": 6,
-        "quantity": 0
-    },
 
     {
         "id": "c6cb80a7-3542-4270-bd2b-920efd5f3f85",

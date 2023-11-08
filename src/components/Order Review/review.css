@@ -1,0 +1,29 @@
+.review-details{
+    width: 571px;
+    height: 107px;
+    border: 1px solid #95A0A7;
+    margin: 21px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+}
+.review-details img{
+    width: 91px;
+    height: 91px;
+    margin: 8px;
+}
+.review p{
+    margin: 0 17px;
+    justify-content: space-between;
+
+}
+.review-space{
+    display: flex;
+    flex-grow: 1;
+}
+.review span{
+    color: coral;
+}
+/* .delete-button{
+    flex-grow: 1;
+} */
