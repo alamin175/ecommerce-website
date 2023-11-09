@@ -6,24 +6,32 @@
     display: flex;
     border-radius: 10px;
     align-items: center;
+    justify-content: center;
 }
 .review-details img{
     width: 91px;
     height: 91px;
     margin: 8px;
 }
+.review{
+    flex-grow: 1;
+}
 .review p{
     margin: 0 17px;
-    justify-content: space-between;
-
 }
 .review-space{
     display: flex;
     flex-grow: 1;
+    align-items: center;
 }
 .review span{
     color: coral;
 }
-/* .delete-button{
-    flex-grow: 1;
-} */
+.review-space .delete-button{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    color: #EB5757;
+    background-color: rgba(235, 87, 87, 30%);
+    margin-right: 10px;
+}
