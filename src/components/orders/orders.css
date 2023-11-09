@@ -1,3 +1,14 @@
 .review-container{
     margin: 100px;
 }
+.order-click{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #de80eb;
+    color: white;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+}
