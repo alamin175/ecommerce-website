@@ -16,3 +16,8 @@
 .product button{
     width: 100%;
 }
+.product button:hover {
+    background-color: #FF9900;
+    border-color: #01020f;
+    
+  }

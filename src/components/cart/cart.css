@@ -4,3 +4,13 @@
     position: sticky;
     top: 0;
 }
+.clear-cart {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FF3030;
+    color: white;
+}
+.cart .clear-button button{
+    width: 100%;
+}
