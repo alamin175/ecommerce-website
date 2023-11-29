@@ -6,13 +6,20 @@
     height: 600px;
     margin: auto;
     margin-top: 100px;
+    
 }
 .form-container h1 {
     text-align: center;
+    margin-top: 10px;
 }
 .login-form{
     margin-left: 43px;
     margin-top: 20px;
+}
+.login-form span{
+    color: red;
+    cursor: pointer;
+    display: block;
 }
 .login-form label{
     display: block;

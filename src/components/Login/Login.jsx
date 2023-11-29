@@ -4,6 +4,7 @@ import { UserContext } from '../Context/AuthContext';
 import './Login.css'
 
 const Login = () => {
+    const [show, setShow] = useState(false)
     const {signIn} = useContext(UserContext)
     const [success, setSuccess] = useState('');
     const location = useLocation()
@@ -27,6 +28,9 @@ const Login = () => {
         })
         .catch(error => console.log(error.message))
     }
+    const showPassword = () => {
+        setShow(!show)
+    }
     return (
         <div>
 
@@ -38,8 +42,14 @@ const Login = () => {
         </div>
         <div className='login-form'>
         <label>Password:</label>
-        <input type="password" id="password" placeholder='Enter Your password' name="password" required/>
+        <input type = {show? "text" : "password"} id="password" placeholder='Enter Your password' name="password" required/>
         <div>
+        <span onClick={showPassword}>
+
+        {
+            show ? "Hide Password" : "Show Password"
+        }
+        </span>
         <input className='btn-submit' type="submit" value='Login' name="login" id="login"/>
         </div>
         </div>

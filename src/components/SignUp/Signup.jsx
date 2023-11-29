@@ -1,9 +1,12 @@
+import { faL } from '@fortawesome/free-solid-svg-icons';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../Context/AuthContext';
 
 const Signup = () => {
     const {createUser} = useContext(UserContext)
+    const [show, setShow] = useState(false)
+    const [showConfirm, setShowConfirm] = useState(false)
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('');
     const handleSignup = event => {
@@ -29,6 +32,12 @@ const Signup = () => {
             setError(error.message)
         })
     }
+    const showPassword = () => {
+        setShow(!show)
+    }
+    const showConfirmPassword = () => {
+        setShowConfirm(!showConfirm)
+    }
     return (
         <div>
         <form onSubmit={handleSignup} className='form-container'>
@@ -39,11 +48,22 @@ const Signup = () => {
         </div>
         <div className='login-form'>
         <label>Password:</label>
-        <input type="password" id="password" placeholder='Enter Your password' name="password" required/>
+        <input type={show ? "text" : "password"} id="password" placeholder='Enter Your password' name="password" required/>
+        <span onClick={showPassword}>
+        {
+            show ? "Hide Password" : "Show Password"
+        }
+        </span>
         </div>
         <div className='login-form'>
         <label>Confirm Password:</label>
-        <input type="password" id="confirm" placeholder='Confirm Your Password' name="confirm" required/>
+        <input type={showConfirm? "text" : "password"} id="confirm" placeholder='Confirm Your Password' name="confirm" required/>
+        <span onClick={showConfirmPassword}>
+
+        {
+            showConfirm ? "Hide Password" : "Show Password"
+        }
+        </span>
         <input className='btn-submit' type="submit" value='Signup' name="login" id="login"/>
         </div>
         <p className='small'><small>Already have an account? <Link to='/login'>Please Login</Link></small></p>
