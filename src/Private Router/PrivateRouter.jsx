@@ -12,7 +12,15 @@ const PrivateRouter = ({children}) => {
     if(user){
         return children;
     }
-    return <Navigate to='/login' state={{from: location}} ></Navigate>
+    return (
+        <div>
+            {
+                alert('You must be login to go anywhere on the website ')
+            }
+            <Navigate to='/login' state={{from: location}} ></Navigate>
+
+        </div>
+    )
         
     //     // <div>
     //     //     {
