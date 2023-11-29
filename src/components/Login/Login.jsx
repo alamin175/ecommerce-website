@@ -5,6 +5,7 @@ import './Login.css'
 
 const Login = () => {
     const [show, setShow] = useState(false)
+    const [error, setError] = useState('')
     const {signIn} = useContext(UserContext)
     const [success, setSuccess] = useState('');
     const location = useLocation()
@@ -26,7 +27,12 @@ const Login = () => {
             navigate(from, {replace: true})
             setSuccess('User Login Successfully')
         })
-        .catch(error => console.log(error.message))
+        .catch(error => {
+            setError(error.message)
+        })
+        
+        
+        
     }
     const showPassword = () => {
         setShow(!show)
@@ -55,6 +61,7 @@ const Login = () => {
         </div>
         <p className='small'><small>New to ema-john? <Link to='/signup'>Create New Account</Link></small></p>
         <p className='success'> {success} </p>
+        <p className='error'>{error} </p>
     </form> 
         </div>
     );

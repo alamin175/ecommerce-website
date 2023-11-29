@@ -1,11 +1,12 @@
 import { faL } from '@fortawesome/free-solid-svg-icons';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { UserContext } from '../Context/AuthContext';
 
 const Signup = () => {
     const {createUser} = useContext(UserContext)
     const [show, setShow] = useState(false)
+    const navigate = useNavigate()
     const [showConfirm, setShowConfirm] = useState(false)
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('');
@@ -18,7 +19,11 @@ const Signup = () => {
         setError('')
         setSuccess('')
         console.log(email,password, confirm);
-        if(password !== confirm){
+        if(password.length < 6){
+                setError("Password must be 6 or more character")
+                return;
+        }
+        else if(password !== confirm){
             setError("password did'nt match")
             return;
         }
@@ -26,7 +31,8 @@ const Signup = () => {
         .then(result => {
             setSuccess('User has been created successfully')
             form.reset();
-            console.log(result.user);
+            alert("User has been created successfully")
+            navigate('/')
         })
         .catch(error =>{ 
             setError(error.message)
